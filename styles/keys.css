@@ -5,6 +5,17 @@
   font-size: 10px;
 }
 
+body {
+  background: rgb(242, 239, 255);
+  background: radial-gradient(
+    circle,
+    rgba(242, 239, 255, 1) 4%,
+    rgba(255, 239, 225, 1) 11%,
+    rgba(230, 255, 239, 0.7861345221682423) 20%,
+    rgba(255, 255, 255, 1) 37%
+  );
+}
+
 .codes {
   height: 100vh;
   width: 100vw;
@@ -17,9 +28,17 @@
   height: 100px;
   text-align: center;
   width: 200px;
+  padding: 0.7rem;
   border: 1px solid lightgrey;
-  box-shadow: 0 0 2px 2px lightgrey;
+  background-color: #f2eef7;
+  box-shadow: 0 0 7px 1px #c7b9ce;
   border-radius: 5px;
+  opacity: 0;
+}
+
+.wrapper.visible {
+  opacity: 1;
+  transform: all 5s; /* not working */
 }
 
 .key {

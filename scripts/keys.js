@@ -18,4 +18,5 @@ document.addEventListener('keypress', function onPress(e) {
   wrapper.append(key);
   wrapper.append(cc);
   keyblock.append(wrapper);
+  wrapper.className = 'wrapper visible';
 });
