@@ -1,3 +1,10 @@
+:root {
+  --dark-purple: #350d68;
+  --yellow-text: #e6e330;
+  --yellow-border: rgb(239, 251, 119);
+  --yellow-shadow: #e1bf39;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +13,18 @@
 }
 
 body {
-  background: rgb(140, 135, 163);
-  background: radial-gradient(
-    circle,
-    rgba(140, 135, 163, 0.4) 7%,
-    rgba(235, 191, 153, 0.5) 24%,
-    rgba(156, 246, 229, 0.4) 40%,
-    rgba(255, 255, 255, 1) 79%
+  background-image: linear-gradient(
+    70deg,
+    hsl(240deg 100% 20%) 0%,
+    hsl(289deg 100% 21%) 13%,
+    hsl(315deg 100% 27%) 25%,
+    hsl(329deg 100% 36%) 36%,
+    hsl(337deg 100% 43%) 47%,
+    hsl(357deg 91% 59%) 57%,
+    hsl(17deg 100% 59%) 68%,
+    hsl(34deg 100% 53%) 78%,
+    hsl(45deg 100% 50%) 89%,
+    hsl(55deg 100% 50%) 100%
   );
 }
 
@@ -25,26 +37,31 @@ body {
 }
 
 .wrapper {
-  height: 100px;
+  height: 200px;
   text-align: center;
   width: 200px;
-  padding: 0.7rem;
-  border: 1px solid lightgrey;
-  background-color: #f2eef7;
-  box-shadow: 0 0 7px 1px #c7b9ce;
+  padding: 0 20px;
+  border: 5px solid var(--yellow-border);
+  background-color: var(--dark-purple);
+  color: var(--yellow-text);
+  box-shadow: 0 0 14px 7px var(--yellow-shadow);
   border-radius: 5px;
   opacity: 0;
+  transition: all 0.2s;
 }
 
 .wrapper.visible {
   opacity: 1;
-  transform: all 5s; /* not working */
+  transition: all 0.3s; /* not working */
 }
 
 .key {
-  font-size: 5rem;
+  font-size: 7rem;
+  line-height: 115px;
+  border-bottom: 1px solid var(--yellow-text);
 }
 
 .charCode {
   font-size: 3rem;
+  line-height: 75px;
 }
